@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fast Food Delight</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Nunito', sans-serif;
+      background: linear-gradient(to right, #fff5e6, #ffe6f0);
+      color: #333;
+    }
+
+    header {
+      background: url('https://source.unsplash.com/1600x500/?fast-food') no-repeat center center/cover;
+      height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+
+    .hero-content {
+      background: rgba(0,0,0,0.5);
+      padding: 30px 50px;
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+    }
+
+    .hero-content h1 {
+      font-size: 3rem;
+      margin-bottom: 15px;
+    }
+
+    .hero-content p {
+      font-size: 1.25rem;
+      margin-bottom: 20px;
+    }
+
+    .hero-btn {
+      display: inline-block;
+      background: #ff4d6d;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .hero-btn:hover {
+      background: #e63956;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2.5rem;
+      color: #ff4d6d;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .card-content h3 {
+      color: #ff4d6d;
+      margin-bottom: 10px;
+    }
+
+    .about {
+      text-align: center;
+      line-height: 1.8;
+      font-size: 1.15rem;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    form {
+      max-width: 600px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input, textarea {
+      padding: 14px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+      background: #fffaf2;
+    }
+
+    button {
+      padding: 14px;
+      background: #ff4d6d;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #e63956;
+    }
+
+    footer {
+      background: #2e2e2e;
+      color: #fff;
+      text-align: center;
+      padding: 25px 10px;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 768px) {
+      .hero-content h1 {
+        font-size: 2rem;
+      }
+
+      .hero-content p {
+        font-size: 1rem;
+      }
+
+      .section-title {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1>🍟 Fast Food Delight</h1>
+      <p>Serving joy in every bite! Burgers, pizzas, desserts & more – fresh, fast, and flavorful.</p>
+      <a href="#menu" class="hero-btn">Explore Our Menu</a>
+    </div>
+  </header>
+
+  <!-- Menu Section -->
+  <section id="menu">
+    <h2 class="section-title">🍔 Our Menu</h2>
+    <div class="container">
+      <div class="card">
+        <img src="burger.jpg" alt="Cheesy Burger">
+        <div class="card-content">
+          <h3>Cheesy Burger</h3>
+          <p>Juicy beef patty, melted cheese, fresh lettuce, and tangy sauce wrapped in a soft bun.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="pizza.jpg" alt="Spicy Pepperoni Pizza">
+        <div class="card-content">
+          <h3>Spicy Pepperoni Pizza</h3>
+          <p>Thin crust loaded with pepperoni, jalapenos, mozzarella, and tomato sauce.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="fries.jpg" alt="Golden French Fries">
+        <div class="card-content">
+          <h3>Golden French Fries</h3>
+          <p>Perfectly crisp fries seasoned with herbs and served with spicy mayo dip.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="hotdog.jpg" alt="Classic Hotdog">
+        <div class="card-content">
+          <h3>Classic Hotdog</h3>
+          <p>Grilled sausage in a bun with ketchup, mustard, and crunchy onions.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="ic.jpg" alt="Ice Cream Sundae">
+        <div class="card-content">
+          <h3>Ice Cream Sundae</h3>
+          <p>Rich vanilla ice cream topped with chocolate syrup, nuts, and cherry.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="donut.jpg" alt="Colorful Donuts">
+        <div class="card-content">
+          <h3>Colorful Donuts</h3>
+          <p>Soft donuts glazed with icing, rainbow sprinkles, and chocolate drizzle.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2 class="section-title">👨‍🍳 About Us</h2>
+    <p class="about">
+      Fast Food Delight is your go-to destination for quick bites, hearty flavors, and unbeatable taste. Our ingredients are handpicked, and our chefs are passionate about delivering joy in every bite. Whether you're craving a burger or a sweet treat, we serve happiness on a plate!
+    </p>  
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2 class="section-title">📞 Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Fast Food Delight | Follow us on Instagram, Facebook & Twitter
+  </footer>
+
+</body>
+</html>
